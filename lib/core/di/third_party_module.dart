@@ -31,12 +31,16 @@
 
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 @module
 abstract class ThirdPartyModule {
   // بقوله: النتيجة اللي هتطلع من الدالة دي، اعتبرها Singleton (نسخة واحدة)      Dio dio();
- @singleton 
+  @singleton
   Dio get dio => Dio();
+
+  @lazySingleton
+  SupabaseClient get supabaseClient => Supabase.instance.client;
 }
 
 // kda injectable fahm ay 7ad 7y3wz dio and 7agy hena 

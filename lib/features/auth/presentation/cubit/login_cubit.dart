@@ -29,7 +29,7 @@ class LoginCubit extends Cubit<LoginState> {
     required String password,
   }) async {
     // emit de le microphone ele el cubit ptklm peh el shsahsa // la tasa en emit pta5od state
-    emit(LoginLoading());
+    emit(LoginLoading()); 
 
     // hena el mafrod 7yrga3 el box pta3 Either
     // 5ale palk ana 3ashan mesamy el method ele pta5od el email we el password de  pe esm call
